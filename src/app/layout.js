@@ -1,7 +1,7 @@
 // File layout dùng để làm các thành phần chung. Nó sẽ có tác động lên toàn bộ trang web (ko cần phải code đi code lại 1 việc nhiều lần)
 
 import Footer from '@/components/Footer';
-import Header from '@/components/Header';
+import Header from '@/components/(auth)/Header';
 import { Inter } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
