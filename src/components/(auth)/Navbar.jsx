@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
+import styles from './Navbar.module.scss'
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles)
 
 function Navbar({ data }) {
     return (
         <Link key={data.id} href={data.url}>
-            {data.title}
+            <span className={cx('span')}>{data.title}</span>
         </Link>
     );
 }

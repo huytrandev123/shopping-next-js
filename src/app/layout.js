@@ -1,8 +1,8 @@
 // File layout dùng để làm các thành phần chung. Nó sẽ có tác động lên toàn bộ trang web (ko cần phải code đi code lại 1 việc nhiều lần)
-
+import './globals.css';
 import Footer from '@/components/Footer';
 import Header from '@/components/(auth)/Header';
-import { Inter } from 'next/font/google';
+import { Inter, Roboto, Poppins } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,9 +15,11 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
-                <Header />
-                {children}
-                <Footer />
+                <div className="container">
+                    <Header />
+                    {children}
+                    <Footer />
+                </div>
             </body>
         </html>
     );

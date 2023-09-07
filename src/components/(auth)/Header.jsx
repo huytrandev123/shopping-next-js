@@ -1,6 +1,11 @@
+'use client';
 import Link from 'next/link';
 import React from 'react';
 import Navbar from './Navbar';
+import styles from './Header.module.scss';
+import classNames from 'classnames/bind';
+
+const cx = classNames.bind(styles);
 
 const links = [
     { id: 1, title: 'Home', url: '/' },
@@ -13,12 +18,23 @@ const links = [
 
 function Header() {
     return (
-        <div>
-            <Link href="/">lamamia</Link>
-            <div>
+        <div className={cx('wrapper')}>
+            <Link className={cx('logo')} href="/">
+                lamamia
+            </Link>
+
+            <div className={cx('links')}>
                 {links.map((link) => (
-                    <Navbar data={link} />
+                    <Navbar className={cx('link')} data={link} key={link.id} />
                 ))}
+                <button
+                    className={cx('logout')}
+                    onClick={() => {
+                        console.log('log out');
+                    }}
+                >
+                    Log out
+                </button>
             </div>
         </div>
     );
