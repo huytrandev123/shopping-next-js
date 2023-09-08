@@ -4,6 +4,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
+import Button from '../Button';
 
 const cx = classNames.bind(styles);
 
@@ -35,6 +36,7 @@ function Header() {
                 >
                     Log out
                 </button>
+
             </div>
         </div>
     );

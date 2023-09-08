@@ -1,16 +1,13 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {};
+// const nextConfig = {};
 
 // VD CONFIG HÌNH ẢNH TỪ NGOÀI VÀO
 
-// const nextConfig = {
-//     images: {
-//         domains: [
-//             "images.pexels.com",
-//             ...
-//         ]
-//     }
-// }
+const nextConfig = {
+    images: {
+        domains: ['images.pexels.com']
+    },
+};
 
 module.exports = nextConfig;
