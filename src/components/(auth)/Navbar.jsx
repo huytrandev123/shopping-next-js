@@ -8,7 +8,7 @@ const cx = classNames.bind(styles)
 function Navbar({ data }) {
     return (
         <Link key={data.id} href={data.url}>
-            <span className={cx('span')}>{data.title}</span>
+            <span className={cx('title')}>{data.title}</span>
         </Link>
     );
 }
