@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
 import Button from '../Button';
+import DarkModeToggle from '../DarkMode/DarkModeToggle';
 
 const cx = classNames.bind(styles);
 
@@ -25,6 +26,7 @@ function Header() {
             </Link>
 
             <div className={cx('links')}>
+                <DarkModeToggle/>
                 {links.map((link) => (
                     <Navbar className={cx('link')} data={link} key={link.id} />
                 ))}
